@@ -1,26 +1,22 @@
+import { useAuth0 } from '@auth0/auth0-react';
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { DefaultLayout, MainLayout } from './layout';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const { isLoading, isAuthenticated, user } = useAuth0();
+    if (isLoading) {
+        return <div>Loading...</div>;
+      }
+      if (isAuthenticated && user) {
+        return (
+            <div className="App">
+                  <MainLayout />
+            </div>
+          );
+      } else {
+        return <DefaultLayout></DefaultLayout>;
+      }
 }
 
 export default App;

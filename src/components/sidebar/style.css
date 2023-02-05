@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-container {
+    padding: 0;
+}
+.p-sidebar-left .p-sidebar.p-sidebar-custom  {
+    width: 150px;
+    padding: 0;
+}
+
+.p-sidebar .p-sidebar-content {
+    padding: 0.25rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    .section-name {
+        display: none;
+    }
+    .p-sidebar-left .p-sidebar.p-sidebar-custom  {
+        width: 67px;
+        padding: 0;
+    }  
+}

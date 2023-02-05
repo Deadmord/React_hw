@@ -1,0 +1,16 @@
+
+.custom-modal {
+  width: 800px;
+  height: 400px;
+  background-color: rgb(148, 148, 148);
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
