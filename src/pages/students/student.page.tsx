@@ -9,9 +9,11 @@ export const StudentsPage = () => {
 
     //const changeRoute = (route: string) => setRoute(route);
   return (
-      <div>
+      <div className=" d-block">
+          <div className="nav-container inline-block" style={{width: "60%"}}>
           <StudentNavBar route={route} setRoute={setRoute} />
-          <div className="student-container">
+          </div>
+          <div className="student-container inline-block" style={{width: "60%"}}>
               {route === 'list' && (
                 <ListStudentsPage />
               )}

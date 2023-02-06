@@ -40,56 +40,37 @@ export const AddStudentPage = () => {
 
   return (
     <div>
-      <h1>Student Form Add Student</h1>
       <form>
-        <div className="mb-3">
-          <label className="form-label">First Name</label>
+        <div className="m-3 d-flex w">
+          <label className="form-label mr-3">First Name</label>
           <input
             type="text"
-            className="form-control"
+            className="form-control w-96"
             id="exampleInputEmail1"
-            aria-describedby="emailHelp"
+            aria-describedby="nameHelp"
+            placeholder="Please enter your first name"
             onChange={(e) => handleChange(e, "firstName")}
           />
-          <div id="emailHelp" className="form-text">
-            Please enter your first name
-          </div>
         </div>
-        <div className="mb-3">
-          <label className="form-label">Last Name</label>
+        <div className="m-3 d-flex">
+          <label className="form-label mr-3">Last Name</label>
           <input
             type="text"
-            className="form-control"
-            aria-describedby="emailHelp"
+            className="form-control w-96"
+            aria-describedby="nameHelp"
+            placeholder="Please enter your last name"
             onChange={(e) => handleChange(e, "lastName")}
           />
-          <div id="emailHelp" className="form-text">
-            Please enter your last name
-          </div>
         </div>
-        <div className="mb-3">
-          <label className="form-label">Email address</label>
+        <div className="m-3 d-flex">
+          <label className="form-label mr-10">Age</label>
           <input
-            type="email"
-            className="form-control"
-            aria-describedby="emailHelp"
-            onChange={(e) => handleChange(e, "email")}
+            type="number"
+            className="form-control ml-5 w-96"
+            aria-describedby="ageHelp"
+            placeholder="Please enter your age"
+            onChange={(e) => handleChange(e, "age")}
           />
-          <div id="emailHelp" className="form-text">
-            Please enter your email
-          </div>
-        </div>
-        <div className="mb-3">
-          <label className="form-label">Phone</label>
-          <input
-            type="text"
-            className="form-control"
-            aria-describedby="emailHelp"
-            onChange={(e) => handleChange(e, "phone")}
-          />
-          <div id="emailHelp" className="form-text">
-            Please enter your phone
-          </div>
         </div>
 
         <button

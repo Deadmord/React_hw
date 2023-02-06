@@ -5,18 +5,16 @@ import { IStudent } from "../../../models/student.model";
 import { addStudent, getStudents, StudentService } from "../../../bl/services";
 import { ProgressSpinner } from "primereact/progressspinner";
 
-
-
 import { DataTable } from "primereact/datatable";
 import { Column } from "primereact/column";
 
 import "./style.scss";
 
 export const ListStudentsPage = () => {
-//   const [nstudent, setNStudent] = useState<IStudent>({} as IStudent);
-    const [students, setStudents] = useState<IStudent[]>([]);
-    const [isLoading, setIsLoading] = useState<boolean>(true);
-    
+  //   const [nstudent, setNStudent] = useState<IStudent>({} as IStudent);
+  const [students, setStudents] = useState<IStudent[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
   useEffect(() => {
     const getStudents = async () => {
       const students = await StudentService.getStudents();
@@ -53,9 +51,16 @@ export const ListStudentsPage = () => {
               filter
               filterPlaceholder="Search by name"
             ></Column>
-            <Column field="lastName" header="LastName"></Column>
-            <Column field="age" header="Age"></Column>
-            <Column field="operation" header="Operation"></Column>
+            <Column
+              field="lastName"
+              header="LastName"
+              sortable
+              filter
+              filterPlaceholder="Search by name"
+            ></Column>
+            <Column field="age" header="Age" sortable></Column>
+            <Column field="operation" header="Operation">
+            </Column>
           </DataTable>
         </>
       )}
